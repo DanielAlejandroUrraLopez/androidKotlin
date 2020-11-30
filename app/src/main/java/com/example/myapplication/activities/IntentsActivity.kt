@@ -28,7 +28,12 @@ class IntentsActivity : AppCompatActivity() {
 
     private fun goIntentFlags(){
         val intent = Intent(this, IntentExtrasActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NO_HISTORY // no guarda el activity en el stack
+       //intent.flags = Intent.FLAG_ACTIVITY_NO_ANIMATION // no animacion
+       // intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // borrar el stack completo
         startActivity(intent)
+       // finish()// destruye este activity evitando que entre en el stack
+
     }
 
     private fun goIntentObject(){
