@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MyApplication</string>
+    <string name="button_to_cycle">1. to life cycle events</string>
+    <string name="button_to_click">2. to click events</string>
+    <string name="button_to_android_extensions">3. to kotlin android extensions</string>
+    <string name="button_to_picasso">4. to picasso</string>
+    <string name="button_to_list_view">5. to list view</string>
+    <string name="button_to_intents">6. to intents</string>
+    <string name="button_to_permissions">7. to permissions</string>
+    <string name="button_to_shared_preferences">8. to shered preferences</string>
+    <string name="button_to_extension_functions">9. to extension functions </string>
+</resources>
