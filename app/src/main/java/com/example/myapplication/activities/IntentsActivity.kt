@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.myapplication.R
+import com.example.myapplication.models.Student
 import kotlinx.android.synthetic.main.activity_intents.*
 
 class IntentsActivity : AppCompatActivity() {
@@ -38,6 +39,8 @@ class IntentsActivity : AppCompatActivity() {
 
     private fun goIntentObject(){
         val intent = Intent(this, IntentExtrasActivity::class.java)
+        val student = Student("Daniel","urra",33,true)
+        intent.putExtra("student",student)
         startActivity(intent)
     }
 
