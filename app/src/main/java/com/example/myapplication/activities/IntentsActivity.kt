@@ -17,17 +17,22 @@ class IntentsActivity : AppCompatActivity() {
     }
 
     private fun goIntentExtras(){
-        val intent = Intent(this, IntentsActivity::class.java)
+        val intent = Intent(this, IntentExtrasActivity::class.java)
+        intent.putExtra("name","Daniel")
+        intent.putExtra("lastName","Urra")
+        intent.putExtra("age",33)
+        intent.putExtra("develop",true)
+
         startActivity(intent)
     }
 
     private fun goIntentFlags(){
-        val intent = Intent(this, IntentsActivity::class.java)
+        val intent = Intent(this, IntentExtrasActivity::class.java)
         startActivity(intent)
     }
 
     private fun goIntentObject(){
-        val intent = Intent(this, IntentsActivity::class.java)
+        val intent = Intent(this, IntentExtrasActivity::class.java)
         startActivity(intent)
     }
 
