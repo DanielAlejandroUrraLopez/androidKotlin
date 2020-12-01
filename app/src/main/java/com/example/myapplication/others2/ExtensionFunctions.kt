@@ -40,7 +40,7 @@ inline fun <reified T : Activity>Activity.goToActivity( init : Intent.()-> Unit 
     startActivity(intent)
 }
 
-fun Activity.goToActivityResult(action: String, requestCode: Int, init: Inet.() -> Unit = {} ) {
+fun Activity.goToActivityResult(action: String, requestCode: Int, init: Intent.() -> Unit = {} ) {
 
     val intent = Intent(action)
     intent.init()
