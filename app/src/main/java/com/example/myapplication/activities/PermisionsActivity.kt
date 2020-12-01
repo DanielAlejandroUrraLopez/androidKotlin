@@ -26,7 +26,26 @@ class PermisionsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_permisions)
 
-        buttonPicture.setOnClickListener({ getPictureFromCameraAskingPermissions() })
+        buttonPicture.setOnClickListener({ getPictureFromCamera() })
+    }
+
+    private fun getPictureFromCamera(){
+        // asegurarnos de que no  hay permiso de camara en manifest
+        // crear intent para capturar la foto
+        val pictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        // comprobar si podemos menejar la captura de fotos (tenemos camara y app de camara)
+        if(pictureIntent.resolveActivity(packageManager) != null){
+
+            startActivityForResult(pictureIntent,requestCameraPicture)
+
+        }else{
+            // no hay activity que pueda manejar el intent (por ejemplo sin camara)
+            Toast.makeText(
+                this,
+                "Error!!",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
     }
 
     private fun getPictureFromCameraAskingPermissions() {
@@ -71,26 +90,6 @@ class PermisionsActivity : AppCompatActivity() {
             }
         }
     }
-
-   /* override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        when (requestCode) {
-            requestCameraPicture -> {
-                // comprobar si el resultado es bueno
-                if (resultCode == Activity.RESULT_OK) {
-                    // obtenemos los extras del intent recibido por parametros
-                    val extras = data!!.extras
-                    // formamos el bitmap a partir d elos extras
-                    val imageBipMap = extras.get("data") as Bitmap
-                    // cargamos la foto como bitmap en el imageView
-                    imageViewPicture.setImageBitmap(imageBipMap)
-                } else {
-                    // la foto no ha sido tomada con exito
-                    Toast.makeText(this, "Picture has failed!", Toast.LENGTH_SHORT).show()
-                }
-            }
-        }
-    }*/
-
     @SuppressLint("MissingSuperCall")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         when (requestCode) {

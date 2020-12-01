@@ -4,7 +4,8 @@
 
     <!--permisos-->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CAMERA" />
+    <!--se comenta el permiso para pruebas del codigo de sin permisos -->
+    <!--<uses-permission android:name="android.permission.CAMERA" />-->
     <!--fin poermisos-->
 
     <application
