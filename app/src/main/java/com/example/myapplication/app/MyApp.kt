@@ -7,7 +7,7 @@ val preferences: MySharedPreferences by lazy { MyApp.prefs!! }
 
 class MyApp : Application() {
 
-    companion object{
+    companion object {
         var prefs: MySharedPreferences? = null
     }
 
