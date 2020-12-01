@@ -30,4 +30,9 @@
     <string name="preferences_name_hint">type name here</string>
     <string name="preferences_age_hint">type age here</string>
     <string name="preferences_button_save">save</string>
+
+    <string name="button_toast">toast</string>
+    <string name="button_snack_bar">snack bar</string>
+    <string name="button_got_to_activity">go to activity</string>
+    <string name="button_load_by_url">load by url</string>
 </resources>

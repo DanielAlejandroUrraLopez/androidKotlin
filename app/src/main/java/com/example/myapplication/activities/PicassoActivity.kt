@@ -16,13 +16,13 @@ class PicassoActivity : AppCompatActivity() {
 
         buttonLoader.setOnClickListener { loadImages() }
 
-        Picasso.with(this).load("https://i.pinimg.com/564x/d8/0c/bd/d80cbdcf865cf7da2c196e5761ffc35b.jpg").fetch()
+        Picasso.with(this).load("https://st4.depositphotos.com/2435561/23030/i/1600/depositphotos_230304352-stock-photo-red-sign-night-chinatown-milan.jpg").fetch()
 
     }
 
     private fun loadImages(){
         Picasso.with(this)
-            .load("https://i.pinimg.com/564x/d8/0c/bd/d80cbdcf865cf7da2c196e5761ffc35b.jpg")
+            .load("https://st4.depositphotos.com/2435561/23030/i/1600/depositphotos_230304352-stock-photo-red-sign-night-chinatown-milan.jpg")
             //.fit()
             .resize(600,600)
             .centerInside()
@@ -44,12 +44,12 @@ class PicassoActivity : AppCompatActivity() {
         val context: Context = this
 
         Picasso.with(this)
-            .load("https://i.pinimg.com/originals/e9/91/51/e991519e535e4558f155a4533f119b7a.jpg")
+            .load("https://st4.depositphotos.com/2435561/23030/i/1600/depositphotos_230304352-stock-photo-red-sign-night-chinatown-milan.jpg")
             .fetch(object: Callback {
                 override fun onSuccess() {
                     imageViewBotton.alpha = 0f
                     Picasso.with(context)
-                        .load("https://i.pinimg.com/originals/e9/91/51/e991519e535e4558f155a4533f119b7a.jpg")
+                        .load("https://st4.depositphotos.com/2435561/23030/i/1600/depositphotos_230304352-stock-photo-red-sign-night-chinatown-milan.jpg")
                         .fit()
                         .into(imageViewBotton)
 
@@ -57,7 +57,6 @@ class PicassoActivity : AppCompatActivity() {
                 }
 
                 override fun onError() {
-                    TODO("Not yet implemented")
                 }
 
             })

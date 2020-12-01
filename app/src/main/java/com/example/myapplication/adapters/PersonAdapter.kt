@@ -7,11 +7,10 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import com.example.myapplication.models.Person
+import com.example.myapplication.others2.inflate
 import kotlinx.android.synthetic.main.list_view_person.view.*
 
 class PersonAdapter(val context: Context,val layout: Int, val list: List<Person>) :BaseAdapter(){
-
-    private val mInflator: LayoutInflater = LayoutInflater.from(context)
 
     override fun getItem(position: Int): Any {
         return list[position]
@@ -32,7 +31,7 @@ class PersonAdapter(val context: Context,val layout: Int, val list: List<Person>
 
     if(convertView === null){
 
-        view = mInflator.inflate(layout,parent,false)
+        view = parent.inflate(layout)
         vh = PersonViewHolder(view)
         view.tag = vh
 
