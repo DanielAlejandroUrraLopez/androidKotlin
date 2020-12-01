@@ -7,14 +7,16 @@ import android.view.View
 import  androidx.appcompat.widget.Toolbar
 import com.example.myapplication.R
 import com.example.myapplication.models.Student
+import com.example.myapplication.others2.ToolbarActivity
 import kotlinx.android.synthetic.main.activity_intent_extras.*
 
-class IntentExtrasActivity : AppCompatActivity() {
+class IntentExtrasActivity : ToolbarActivity() {
 
-    private lateinit var toolbar: Toolbar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intent_extras)
+
+        toolbarToLoad(toolbar as Toolbar)
 
         buttonBack.setOnClickListener { startActivity( Intent(this,IntentsActivity::class.java) ) }
 
@@ -25,9 +27,9 @@ class IntentExtrasActivity : AppCompatActivity() {
             checkBoxDeveloper.visibility = View.INVISIBLE
         }
 
-        toolbar = findViewById(R.id.toolbar)
+       /* toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)*/
 
 
     }

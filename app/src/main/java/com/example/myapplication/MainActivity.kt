@@ -1,28 +1,27 @@
 package com.example.myapplication
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
-import  androidx.appcompat.widget.Toolbar
+import androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.myapplication.activities.*
-import com.example.myapplication.others.*
+import com.example.myapplication.others2.ToolbarActivity
 import com.google.android.material.snackbar.Snackbar
-import java.lang.NullPointerException
+import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
-
-    private lateinit var toolbar: Toolbar
+class MainActivity : ToolbarActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        toolbar = findViewById(R.id.toolbar)
+        /*toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)*/
+
+        toolbarToLoad(toolbar as Toolbar)
 
 
         //Variables().showCases()

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.widget.Toast
 import com.example.myapplication.R
+import com.example.myapplication.others2.LifeCycleEventsActivity
 
 class LifeCycleActivity : LifeCycleEventsActivity() {
 

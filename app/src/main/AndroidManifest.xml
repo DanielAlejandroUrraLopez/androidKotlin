@@ -11,14 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <activity android:name=".others2.ToolbarActivity"></activity>
         <activity android:name=".activities.IntentExtrasActivity">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"
-                >
-
-            </meta-data>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"></meta-data>
         </activity>
-        <activity android:name=".activities.LifeCycleEventsActivity" />
+        <activity android:name=".others2.LifeCycleEventsActivity" />
         <activity android:name=".activities.ExtensionFunctionsActivity" />
         <activity android:name=".activities.SharedPreferencesActivity" />
         <activity android:name=".activities.PermisionsActivity" />
