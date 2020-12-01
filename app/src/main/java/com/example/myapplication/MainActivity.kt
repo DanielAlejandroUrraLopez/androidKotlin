@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import  androidx.appcompat.widget.Toolbar
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.myapplication.activities.*
 import com.example.myapplication.others.*
@@ -12,9 +13,17 @@ import com.google.android.material.snackbar.Snackbar
 import java.lang.NullPointerException
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var toolbar: Toolbar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
 
         //Variables().showCases()
         //Operators().showHolas()

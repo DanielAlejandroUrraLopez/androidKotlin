@@ -4,11 +4,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import  androidx.appcompat.widget.Toolbar
 import com.example.myapplication.R
 import com.example.myapplication.models.Student
 import kotlinx.android.synthetic.main.activity_intent_extras.*
 
 class IntentExtrasActivity : AppCompatActivity() {
+
+    private lateinit var toolbar: Toolbar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intent_extras)
@@ -21,6 +24,11 @@ class IntentExtrasActivity : AppCompatActivity() {
         if(!isExtraSet && !isParcelableSet){
             checkBoxDeveloper.visibility = View.INVISIBLE
         }
+
+        toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
 
     }
 
